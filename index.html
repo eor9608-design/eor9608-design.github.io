@@ -1,0 +1,39 @@
+<article id="host">
+  <template shadowrootmode="open" shadowrootslotassignment="named">
+    <style>
+      .header {
+        background-color: plum;
+      }
+      .meta {
+        background-color: green;
+      }
+      .body {
+        background-color: lightblue;
+      }
+    </style>
+
+    <h2 class="header">
+      <slot name="title"></slot>
+    </h2>
+
+    <div class="meta">
+      <slot name="meta"></slot>
+    </div>
+
+    <div class="body">
+      <slot></slot>
+      Hello I am erik.
+    </div>
+  </template>
+
+  <p>
+    Text 1 with no slot attribute. Goes into default (unnamed) slot inside the
+    "body" div.
+  </p>
+  <span slot="title">Text for the title slot</span>
+  <span slot="meta">Text for the meta slot</span>
+  <p>
+    Text 2 with no slot attribute. Also goes into default (unnamed) slot inside
+    the "body" div.
+  </p>
+</article>
