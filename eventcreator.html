@@ -5,6 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Outreach: Create Event</title>
   </head>
-    <h1>Event Creator Goes Here</h1>
+  <body style="padding: 0; margin: 10; height: 100vh">
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: vh;
+      "
+    >
+      <div style="display: block; width: 100%">
+        <div style="width: 50%; float: left; display: inline-block">
+          <div style="width: 50%; display: inline-flex; flex-direction: column">
+            <label
+              for="email-input"
+              style="margin-bottom: 1px; margin-top: 50px; zoom: 1.5"
+              >Enter Event Information:</label
+            >
+            <br />
+            <input
+              id="name-input"
+              type="text"
+              placeholder="Enter event name:"
+              style="text-align: left; zoom: 1.5; margin-bottom: 10px"
+            />
+          </div>
+          <div style="width: 50%; display: inline-flex; flex-direction: column">
+            <input
+              type="text"
+              placeholder="Enter Estimated Date:"
+              style="text-align: left; zoom: 1.5; margin-bottom: 10px"
+            />
+          </div>
+          <br />
+          <div style="width: 50%; display: inline-flex; flex-direction: column">
+            <input
+              type="text"
+              placeholder="Enter Location:"
+              style="text-align: left; zoom: 1.5; margin-bottom: 10px"
+            />
+          </div>
+          <div style="width: 50%; display: inline-flex; flex-direction: column">
+            <textarea
+              id="bio"
+              name="bio"
+              rows="5"
+              cols="40"
+              placeholder="Short Description:"
+              style="resize: none; zoom: 1.5; margin-bottom: 10px"
+            ></textarea>
+          </div>
+          <div style="width: 50%; display: inline-flex; flex-direction: column">
+            <input
+              type="text"
+              placeholder="How many people are you looking for?"
+              style="text-align: left; zoom: 1.5"
+            />
+          </div>
+          <div style="width: 50%; display: inline-flex; flex-direction: column">
+            <input
+              type="text"
+              placeholder="Tags:"
+              style="text-align: left; zoom: 1.5"
+            />
+          </div>
+        </div>
+        <div style="width: 50%; float: left; display: inline-block">
+          Your content
+
+          <button onclick="window.location.href = 'home.html'">Sign Up</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
