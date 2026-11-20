@@ -4,82 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Outreach: Create Event</title>
-  </head>
-  <body style="padding: 0; margin: 10; height: 100vh">
-    <div
-      style="
+    <style>
+      body {
+        margin: 10px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+      .page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding-top: 50px;
+      }
+      .column {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: vh;
-      "
-    >
-      <div style="display: block; width: 100%">
-        <div style="width: 50%; float: left; display: inline-block">
-          <div style="width: 50%; display: inline-flex; flex-direction: column">
-            <label
-              for="email-input"
-              style="margin-bottom: 1px; margin-top: 50px; zoom: 1.5"
-              >Enter Event Information:</label
-            >
-            <br />
-            <input
-              id="name-input"
-              type="text"
-              placeholder="Enter event name:"
-              style="text-align: left; zoom: 1.5; margin-bottom: 10px"
-            />
-          </div>
-          <div style="width: 50%; display: inline-flex; flex-direction: column">
-            <input
-              type="text"
-              placeholder="Enter Estimated Date:"
-              style="text-align: left; zoom: 1.5; margin-bottom: 10px"
-            />
-          </div>
-          <br />
-          <div style="width: 50%; display: inline-flex; flex-direction: column">
-            <input
-              type="text"
-              placeholder="Enter Location:"
-              style="text-align: left; zoom: 1.5; margin-bottom: 10px"
-            />
-          </div>
-          <div style="width: 50%; display: inline-flex; flex-direction: column">
-            <textarea
-              id="bio"
-              name="bio"
-              rows="5"
-              cols="40"
-              placeholder="Short Description:"
-              style="resize: none; zoom: 1.5; margin-bottom: 10px"
-            ></textarea>
-          </div>
-          <div style="width: 50%; display: inline-flex; flex-direction: column">
-            <input
-              type="text"
-              placeholder="How many people are you looking for?"
-              style="text-align: left; zoom: 1.5"
-            />
-          </div>
-          <div style="width: 50%; display: inline-flex; flex-direction: column">
-            <input
-              type="text"
-              placeholder="Tags:"
-              style="text-align: left; zoom: 1.5"
-            />
-          </div>
-        </div>
-        <div style="width: 50%; float: left; display: inline-block">
-          <label
-            for="email-input"
-            style="margin-bottom: 1px; margin-top: 50px; zoom: 1.5"
-            >Submit:</label
-          >
-
-          <button onclick="window.location.href = 'home.html'">Sign Up</button>
-        </div>
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .column input[type="text"],
+      .column textarea {
+        width: 100%;
+        max-width: 400px;
+        font-size: 1.1rem;
+        padding: 6px;
+        box-sizing: border-box;
+      }
+      textarea {
+        resize: none;
+      }
+      button {
+        font-size: 1.1rem;
+        padding: 6px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="column">
+        <label for="cover-image">Cover Image:</label>
+        <input id="cover-image" type="file" accept="image/*" />
+        <img
+          src="Assets/PlaceholderEventImage.jpg"
+          alt="Place Holder Event Image"
+        />
+      </div>
+      <div class="column">
+        <label for="name-input">Enter Event Information:</label>
+        <input id="name-input" type="text" placeholder="Enter event name:" />
+        <input type="text" placeholder="Enter Estimated Date:" />
+        <input type="text" placeholder="Enter Location:" />
+        <textarea rows="5" placeholder="Short Description:"></textarea>
+        <input type="text" placeholder="How many people are you looking for?" />
+        <input type="text" placeholder="Tags:" />
+        <button onclick="window.location.href = 'home.html'">Submit</button>
       </div>
     </div>
   </body>
